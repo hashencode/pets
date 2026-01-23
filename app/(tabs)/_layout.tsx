@@ -1,12 +1,11 @@
 import { Tabs } from 'expo-router';
 
-import { CalendarFold, PawPrint } from 'lucide-react-native';
+import { Blend, PawPrint, Smile } from 'lucide-react-native';
 
 export default function TabLayout() {
     return (
         <Tabs
             screenOptions={{
-                headerShown: false,
                 tabBarActiveTintColor: 'black',
             }}>
             <Tabs.Screen
@@ -17,17 +16,17 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="home"
+                name="community"
                 options={{
-                    title: 'Tab One',
-                    tabBarIcon: ({ color }) => <CalendarFold color={color} />,
+                    title: 'Community',
+                    tabBarIcon: ({ color }) => <Blend color={color} />,
                 }}
             />
             <Tabs.Screen
-                name="two"
+                name="me"
                 options={{
-                    title: 'Tab Two',
-                    tabBarIcon: ({ color }) => <PawPrint color={color} />,
+                    title: 'Me',
+                    tabBarIcon: ({ color }) => <Smile color={color} />,
                 }}
             />
         </Tabs>
